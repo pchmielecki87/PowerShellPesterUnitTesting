@@ -7,6 +7,10 @@ trigger:
 
 variables:
   vmImage: ubuntu-latest
+  azureServiceConnection: AdoServiceConnection
+
+pool:
+  vmImage: $(vmImage)
 
 stages:
   - stage: Lint
@@ -47,7 +51,7 @@ stages:
           - task: AzurePowerShell@5
             displayName: Run PowerShell Tests
             inputs:
-              azureSubscription: Pay-As-You-Go
+              azureSubscription: $(azureServiceConnection)
               scriptType: inlineScript
               inline: |
                 Install-Module -Name Pester -Force
