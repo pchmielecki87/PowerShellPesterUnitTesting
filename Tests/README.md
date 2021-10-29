@@ -17,4 +17,4 @@ Or run automatically by YAML pipeline.
 | :------ | :--------- |
 | CreateRgIfNotExist.Tests | Check syntax of the Azure RG creation script |
 | New-FictionalFile.Tests | Check syntax of the file existence check script. Based on [example](https://adamtheautomator.com/pester-mock/) | 
-| Create-Dir.Tests | Check syntax of the file existence check script. Based on [example](https://octopus.com/blog/testing-powershell-code-with-pester) | 
+| Create-Dir.Tests | Check syntax of the crete directory script. Based on [example](https://octopus.com/blog/testing-powershell-code-with-pester) | 
