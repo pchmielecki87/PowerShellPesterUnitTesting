@@ -59,7 +59,7 @@ stages:
                 Invoke-Pester -CI
               azurePowerShellVersion: latestVersion
               pwsh: true
-              workingDirectory: $(Build.SourcesDirectory)
+              workingDirectory: $(Build.SourcesDirectory)/Tests
           - task: PublishTestResults@2
             displayName: Publish Test Results
             inputs:
