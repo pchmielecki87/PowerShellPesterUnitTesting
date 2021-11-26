@@ -3,7 +3,7 @@ trigger:
   branches:
     include:
     # run only on main branch
-    - main
+      - main
 
 variables:
   vmImage: ubuntu-latest
