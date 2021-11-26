@@ -42,7 +42,6 @@ stages:
               targetType: inline
               script: |
                 find -name '*.json' -exec jsonlint --nonstrict --verbose {} \;
-                failOnStderr: false
       - job: Testing
         displayName: Testing
         pool:

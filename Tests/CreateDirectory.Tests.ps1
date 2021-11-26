@@ -1,13 +1,23 @@
-Describe "Directory Creation" {
-  Context 'Path' {
-      It 'should contain: path_that_you_used_for_the_function'
-      $path = 'path_that_you_used_for_the_function'
-      $path | Should -Exist
+Describe "Test - Directory Creation" {
+  Context "Path" {
+    BeforeAll {
+      Mock Write-Error
+    }
+
+      It "It writes error 'Path should contain: .'" {
+        $path = '.'
+        $path | Should -Exist
+      }
+
   }
 
   Context "New Directory" {
-      It 'Should create a new directory called TestDir'
-      $dir = 'TestDir'
-      $dir | Should -Be 'TestDir'
+    BeforeAll {
+      Mock Write-Error
+    }
+      It "Should create a new directory called 'TestDir'" {
+        $dir = 'TestDir'
+        $dir | Should -Be 'TestDir'
+      }
   }
 }
